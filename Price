@@ -1,0 +1,43 @@
+#include <iostream>
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int price;
+    int finalfee;
+    int age;
+    int child;
+    int OAP;
+    int standard;
+    int distance;
+
+    child = 0.75;
+    OAP = 0.50;
+    standard = 1.00;
+
+    cout << "Please state the distance you wish to travel in Kilometers? " << "\n";
+    cin >> distance ;
+    cout << "Now enter your age" << "\n";
+    cin >> age ;
+
+     if (age > 65)
+     {
+         finalfee = distance * OAP;
+     }
+    if (age < 17)
+    {
+        finalfee = distance * child;
+    }
+    if (17 < age <  65)
+    {
+        finalfee = distance * standard;
+    }
+
+    cout << "Your age is: " << age << "\n" ;
+    cout << "Your fee is: " << finalfee ;
+
+    return 0;
+}
